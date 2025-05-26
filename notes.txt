@@ -1,0 +1,123 @@
+
+C - datatypes
+---
+int a = 10;
+float b = 45.43;
+char
+double
+long
+short
+
+int a[3]  = {10,20,30};
+
+
+*** Everything in python is object ****
+*** Every object contains methods ******
+
+objects
+----------------
+
+number
+-------
+number can be integer or decimal or octal or hexa.
+
+a = 10
+b = 45
+aval = 45
+bval = 56
+cval = 56.435
+
+
+string
+-------
+string is defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "unix shell scripting"
+cname = """machine learning"""
+dname = "unix"
+
+
+
+
+list ( array in C )
+-----
+list contains group of elements.
+Elements can be numbers or strings or any combination.
+list is defined in []
+
+alist = [10,20,40,67,89,90] 
+blist = ["unix","java","oracle"]
+clist = [56,78.43,"unix","java",[30,40,50]]
+dlist = [[10,20],[40,50]]
+
+
+
+tuple ( immutable , uneditable , unchangeable)
+-----
+tuple contains set of elements.
+Elements can be numbers or strings or any combination.
+tuple is defined in ().
+**** Elements inside tuple cant be modified directly ***
+
+atup = (40,50,60)
+btup = ("java","oracle","genai")
+ctup = (50,45.45,"unix")
+dtup = ((10,20),(40,50))
+
+
+
+dictionary ( hashmap  hash  json  associativearray )
+-----------
+dictionary contains keys aand values.
+In dictionary, keys are unique
+
+syntax:  object =  { key: value , key:value , key:value}
+example:  book  = {"chap1":10,"chap2":20 ,"chap3":30}
+          data  = {1:2,3:4,5:6}
+          book  = {"chap1":["rita","US"],"chap2":["gita","UK"] }
+
+
+Index
+-------
+chap1  10
+chap2  20
+chap3  30
+chap4  40
+chap5  40
+
+
+
+set ( venndiagrams)
+-----
+set is UNORDERED collection of UNIQUE elements of same type.
+
+aset = {10,10,10,20,30,30}
+
+
+level1
+level1
+level1
+level1
+level1
+if cond:
+    level2
+    level2
+else:
+    level2
+    level2
+level1
+level1
+
+
+conditions
+-------------
+simple if
+if-else 
+if-elif-elif-elif-else
+
+
+
+
+task        =      core python skills      + libraries + domain expertise
+                  ( procedural  or oop)
