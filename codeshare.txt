@@ -1,0 +1,555 @@
+
+https://github.com/giridhar276/jpmc26052025
+
+
+name = "python programming"
+print(name)
+print("I love", name)
+#slicing
+#string[start:stop:step]
+print(name[0])
+print(name[1])
+print(name[0:8])
+print(name[8:14])
+print(name[:])   # start = 0    stop=18   
+print(name[::])  # start = 0    stop=18   step =1
+print(name[0:18]) #default step is 1
+print(name[0:18:1])
+print(name[0:18:2])
+print(name[-1])
+print(name[-2])
+print(name[-5:-1])
+print(name[::-1])
+#p    y     t     h    o     n         p    r    o    g   r   a  m   m   i    n   g
+#0    1     2     3    4     5    6    7    8    9   10  11  12  13  14  15  16  17
+# 
+#                                                           -5  -4  -3  -2  -1
+  
+
+
+
+
+
+
+name = "python programming"
+print(name.capitalize())
+print(name.title())
+print(name.replace("python","shell"))
+#name = name.replace("python","shell") # this is permanent
+print(name.split(" "))
+print(name.upper())
+print(name.lower())
+print(name.swapcase())
+print(name.isupper())
+print(name.islower())
+print(name.isalpha())
+print(name.center(40))
+print(name.center(40,"*"))
+print(name.startswith("p"))
+print(name.endswith("g"))
+print(name.endswith("m"))
+
+
+
+
+
+##############
+# simple if 
+############
+if 1 < 2 :
+    print("smaller")
+
+if name.isupper():
+    print("string is upper")
+    print("inside if")
+    print("still inside if")
+
+
+if name.endswith("g"):
+    print("String is lower")
+    print("inside if")
+##########
+# if-else
+###########
+if name.isupper():
+    print("string is upper")
+    print("inside if")
+else:
+    print("string is lower")
+    print("inside else")
+
+################################
+#if-elif-elif-elif-elif-elif-else
+###################################
+lang = input("Enter any language :")
+if lang == "python":
+    print("you are learning",lang)
+elif lang == "java":
+    print("you are learning",lang)
+elif lang == "unix":
+    print("you are learning", lang)
+else:
+    print("you are learning someother langauge")
+    
+    
+
+
+
+
+
+aname = " python  "
+print(len(aname))
+print(aname.strip())
+print(len(aname.strip()))  # remove whitespaces at both ends
+print(len(aname.lstrip()))
+print(len(aname.rstrip()))
+
+### check for substring exists or not
+name = "python programming"
+print(name.find("ram"))  # if substring is found, it returns starting index
+print(name.find("abc"))  # -1 if not found
+if name.find("abc") !=  -1 :
+    print("substring exists")
+else:
+    print("not found")
+
+
+if "ram" in name:
+    print("substring exists")
+else:
+    print("not found")
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ ##########
+ write a program to read some filename as input from keyboard and display the below output.
+ 
+ if file is ending with .py ---> display "python file"
+
+if file is ending with sh ------> display "shell file"
+
+if file is ending with .java  ----> display "java file"
+
+other than the above files ------> display "Unknown file"
+
+ 
+ Enter any filename :   test.py
+ Its python file
+ 
+  Enter any filename :  example.java
+ Its java file
+ 
+ 
+ 
+ 
+ 
+filename = input("Enter any filename :")
+
+if filename.endswith(".py"):
+    print("python file")
+elif filename.endswith(".java"):
+    print("java file")
+elif filename.endswith(".sh"):
+    print("unix shell file")
+else:
+    print("unknown file")
+    
+    
+    
+    
+    
+    
+
+
+
+
+# range(start,stop,step)
+for i in range(1,11):
+    print(i)
+
+for i in range(1,11,2):
+    print(i)
+
+for i in range(2,11,2):
+    print(i)
+
+for i in range(10,1,-1):
+    print(i)
+
+for i in range(10,1,-2):
+    print(i)
+
+name = "python"
+for char in name:
+    print(char)
+
+name = "python"
+for char in name:
+    print(char,end=" ")
+
+for i in range(10,1,-2):
+    print(i,end="  ")
+    
+    
+    
+##################################################################
+    
+write a program to convert the string to uppercase only if its length is more than 10 characters else display the same string.
+
+
+sample output:
+Enter a string: python programming
+PYTHON PROGRAMMING
+
+
+    
+Enter a string: python 
+
+
+
+text = input("Enter a string :")
+
+if len(text) > 10:
+    print(text.upper())
+else:
+    print(text)
+    
+##################################################################
+write a program to reverse a string without using [::-1]
+
+Enter any string:  python
+nohtyp
+
+
+
+
+text = input("Enter a string:")  #python
+rev_text = ""
+#print(text[::-1])
+
+for char in text:
+    rev_text = char + rev_text         
+print("Reversed:",rev_text)
+
+############### method2
+for char in range(len(text),0,-1):    # range(6,0,-1)
+    print(text[char-1],end="")      # text[6]
+                             # text[4]
+
+
+
+
+##################################################################
+
+write a program to count no. of words in a sentence.
+
+sample output:
+
+Enter a sentence: I love python programming language
+word count:  5
+
+
+
+
+text = input("Enter a sentence:")
+
+getcount = len(text.split(" "))
+print("No. of words in sentence :", getcount)
+##################################################################
+
+write a program to print words longer than 4 characters in a sentence.
+
+
+
+##################################################################
+
+write a program to replace all the vowels in a string with *.
+
+Enter a string: python
+pyth*n
+
+
+
+
+text = input("Enter  a string :")   #python
+vowels = "aeiouAEIOU"
+result = ""
+for char in text:
+    if char in vowels:
+        result = result + "*"
+    else:
+        result = result + char   #pyth
+print(result)
+
+
+##################################################################
+
+write a program to count how many uppercase , lowercase letters and digits are  in  a string
+
+
+Enter a string: PyTHon108
+Uppercase letters: 3
+Lowercase letters: 3
+Digits : 3
+
+
+
+text = input("Enter a string :")
+upper = 0
+lower = 0
+digits= 0
+for char in text:
+    if char.isupper():
+        upper+=1
+    elif char.islower():
+        lower+=1
+    elif char.isdigit():
+        digits+=1
+print("No. of upper chars:", upper)
+print("No. of lower chars:", lower)
+print("No. of digits:", digits)                      
+
+##################################################################
+    
+write a program to read password from keyboard and valite the password
+    
+
+##################################################################
+
+write a progarm to count character frequencies:
+
+
+Enter a string :  hello
+
+h : 1 time
+e : 1 time
+l : 2 times
+o : 1 time
+
+
+text = input("Enter any text:")
+
+for char in set(text):
+    print(char ,":", text.count(char))
+
+##################################################################
+
+
+
+
+
+
+
+alist.append(100)          # single value
+print("After appeding :",alist)
+alist.extend([91,29,53])   #multiple values
+print("After extending:", alist)
+alist.insert(0,10)         # list.insert(index,value)
+print("After inserting :", alist)
+alist.pop(1)               #list.pop(index)
+print("After pop operation :",alist)
+alist.pop()               #default is last index , value at last index is removed
+print("After pop operation :",alist)
+alist.remove(10)          # 10 in the value in the list
+print("After removing :",alist)
+# validate it first and then remove
+if 200 in alist:
+    alist.remove(200)
+    print("After removing :",alist)
+
+alist.reverse()          # reversing in place
+print("After reversing :",alist)
+alist.sort()             # ascending
+print("Afters sorting :",alist)
+alist.sort(reverse=True)
+print("After sorting in descending order:",alist)
+
+
+
+
+
+
+
+# iterating
+for val in alist:
+    print(val)
+
+## reversing the list
+for val in alist[::-1]:
+    print(val)
+
+# reversing the list
+alist.reverse()
+for val in alist:
+    print(val)
+
+
+
+
+#################################################################
+
+write a a program to calculate the sum of all the values in the list without sum()
+
+alist = [10,20,30,40]
+
+sample output: 100
+
+
+#################################################################
+
+write a program to remove all the duplicates from the list
+
+alist = [10,20,20,20,10,10,30]
+
+output:
+[10,20,30]
+
+#################################################################
+
+
+write a program to count how many times an element appears in the list
+
+
+languages = ["python","c","python","unix","java","unix"]
+
+
+python : 2 times
+c      :  1 time
+Unix   :  2 times
+Java   :  1 time
+
+
+#################################################################
+
+wrrite a program to reverse a list without list.reverse() and [::-1]
+
+
+#################################################################
+
+write a program to square each number in a list
+
+nums = [1,2,3,4]
+
+output:
+[1,2,9,16]
+
+
+#################################################################
+
+write a program to join a list of words into a single string
+
+words = ["I","love","python","programming"]
+
+output:
+I love python programming
+
+
+#################################################################
+
+write a program to filter words longer than 4 letters
+
+words = ["python","unix","java","oracle"]
+
+output:
+["python","oracle"]
+
+#################################################################
+
+Write a program to join corresponding strings from two lists.
+
+first = ["Good", "Data", "Machine"]
+second = ["Morning", "Science", "Learning"]
+
+Output:
+Good Morning
+Data Science
+Machine Learning
+
+#################################################################
+
+Write a program to get all unique words from a list of sentences.
+
+sentences = ["hello world", "hello python", "data world"]
+
+output:
+["hello","world","python","data","world"]
+
+#################################################################
+
+
+Write a program to capitalize only the first letter of each word in a list 
+    
+#################################################################
+
+data = ["Alice", "", None, "Bob", "Carol", "", None]
+
+Write a program to replace all None or empty strings in a list with 'NA'.
+
+output:
+["Alice", 'NA', 'NA', "Bob", "Carol", 'NA', 'NA']
+#################################################################
+
+
+#################################################################
+#####################list comprehension #####################
+#################################################################
+
+
+#Simple List Comprehension
+# Square of numbers from 1 to 5
+squares = [x**2 for x in range(1, 6)]
+# Output: [1, 4, 9, 16, 25]
+
+
+
+#With Condition (if)
+# Even numbers from 1 to 10
+evens = [x for x in range(1, 11) if x % 2 == 0]
+# Output: [2, 4, 6, 8, 10]
+
+
+
+#If-Else in List Comprehension
+# Label even/odd
+labels = ["Even" if x % 2 == 0 else "Odd" for x in range(1, 6)]
+# Output: ['Odd', 'Even', 'Odd', 'Even', 'Odd']
+
+
+#With String Filtering
+# Words with length > 3
+words = ["cat", "apple", "dog", "banana"]
+long_words = [w for w in words if len(w) > 3]
+# Output: ['apple', 'banana']
+
+
+#Nested Loop
+# Create pairs (i, j)
+pairs = [(i, j) for i in range(2) for j in range(3)]
+# Output: [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)]
+
+
+
+#With strip() and case conversion
+# Clean and uppercase names
+names = [" Alice ", "Bob", " carol "]
+cleaned = [name.strip().upper() for name in names]
+# Output: ['ALICE', 'BOB', 'CAROL']
+
+
+
+#List of Words Starting with Vowel
+words = ["apple", "banana", "orange", "grape", "umbrella"]
+vowels = [w for w in words if w[0].lower() in 'aeiou']
+# Output: ['apple', 'orange', 'umbrella']
+
+
+
+
+ 
