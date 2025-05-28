@@ -72,11 +72,14 @@ dictionary ( hashmap  hash  json  associativearray )
 -----------
 dictionary contains keys aand values.
 In dictionary, keys are unique
+key can be number or string
+value can be number,string,list,tuple,dictionary,set
 
 syntax:  object =  { key: value , key:value , key:value}
-example:  book  = {"chap1":10,"chap2":20 ,"chap3":30}
+example:  book  = {"chap1":10,"chap2":20 ,"chap3":30 }
           data  = {1:2,3:4,5:6}
           book  = {"chap1":["rita","US"],"chap2":["gita","UK"] }
+          book  = {"chap1":{"city":"UK"},"chap2":{"city":"US"}   }
 
 
 Index
@@ -150,3 +153,96 @@ immutable objects
 number
 string
 tuple
+
+
+
+**** Never save the filename with builtin keywords, functions and library names.
+
+list.py  ----> wrong practice
+
+range.py -----> wrong practice   X
+
+
+
+
+dataset
+--------
+csv
+json  ---> keys and values ----> dictionary
+yaml
+xml
+
+
+
+file handling
+----------------------
+
+txt
+csv
+json
+xml
+yaml
+xlsx
+xls
+log 
+ppt
+pptx
+pdf
+docx
+json
+html
+zip
+rar
+.tar.gz
+gz
+7z
+jpg
+gif
+mpeg
+mp3
+dat
+
+
+
+working with flat files ( txt csv conf log dat)
+-------------------------------------------------
+- no need of installing any libraies
+
+
+read mode r 
+write mode w 
+append mode  a
+
+opening the file 
+----------------------
+
+syntax:   object = open(filename , mode)
+example:    fobj = open("customers.txt","r" )   # read mode
+            # the file should exist to read the file
+
+           fobj = open("customers.txt","w" )    # write mode
+            case1 : If the file is not existing , file will be created first
+            case2: If the file is already existing, it overwrite the content
+
+
+           fobj = open("customers.txt","a" )    # append mode
+            case1 : If the file is not existing , file will be created first
+            case2: If the file is already existing, it appends the new content
+
+
+
+closing the file
+---------------
+fobj.close()
+
+
+
+
+working with third party files ( docx pptx pdf 7z xlsx  db connection    web scrapping   web development  visualization)
+----------------------------------------------------------
+we need to install third party libary from www.pypi.org
+
+
+
+
+
