@@ -1,4 +1,6 @@
 
+
+
 C - datatypes
 ---
 int a = 10;
@@ -222,7 +224,7 @@ example:    fobj = open("customers.txt","r" )   # read mode
 
            fobj = open("customers.txt","w" )    # write mode
             case1 : If the file is not existing , file will be created first
-            case2: If the file is already existing, it overwrite the content
+            case2: If the file is already existing, it overwrites the content
 
 
            fobj = open("customers.txt","a" )    # append mode
@@ -238,6 +240,13 @@ fobj.close()
 
 
 
+
+
+
+
+
+
+
 working with third party files ( docx pptx pdf 7z xlsx  db connection    web scrapping   web development  visualization)
 ----------------------------------------------------------
 we need to install third party libary from www.pypi.org
@@ -246,3 +255,72 @@ we need to install third party libary from www.pypi.org
 
 
 
+
+
+reading the file
+-----------------
+1. reading the file line by line using file object
+2. fobj.readlines()
+3. fobj.read()
+4. using csv library
+5. using pandas library
+
+writing to the file
+----------------
+fobj.write()
+fobj.writelines()
+using csv library
+using pandas library
+
+
+
+step1: Creating virtual enviornment
+-------------------------------
+pip -m venv myenv1
+
+step2: activate your enviornment
+----------------------------------
+ .\myenv1\Scripts\activate  ( windows )
+ source ./myenv1/bin/activate ( Linux or mac)
+
+step3: deactivate 
+-------------------
+deactivate 
+
+
+
+
+exception handling
+--------------------
+1.syntax error
+2. semantic error or runtime error or logical error
+
+handling the errors that occurs during runtime is known as exception handling
+
+try
+except
+else
+finally
+
+
+function | definition | block | subroutine | submodule
+-----------------------------------------------------
+
+
+builtin functions
+in the console ...  dir(__builtins__)
+
+
+user defined functions
+---------------------------
+reusability purpose
+define code once .. and call it for multiple times
+
+** In python, user defined function begins with def keyword.##
+
+
+different ways of passing arguments
+--------------------------------------
+fixed arguments
+default arguments
+variable length arguments
