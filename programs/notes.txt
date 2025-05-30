@@ -1,0 +1,324 @@
+
+C - datatypes
+---
+int a = 10;
+float b = 45.43;
+char
+double
+long
+short
+
+int a[3]  = {10,20,30};
+
+
+*** Everything in python is object ****
+*** Every object contains methods ******
+
+objects
+----------------
+
+number
+-------
+number can be integer or decimal or octal or hexa.
+
+a = 10
+b = 45
+aval = 45
+bval = 56
+cval = 56.435
+
+
+string
+-------
+string is defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "unix shell scripting"
+cname = """machine learning"""
+dname = "unix"
+ename = '''data science'''
+
+
+
+
+list ( array in C )
+-----
+list contains group of elements.
+Elements can be numbers or strings or any combination.
+list is defined in []
+
+alist = [10,20,40,67,89,90] 
+blist = ["unix","java","oracle"]
+clist = [56,78.43,"unix","java",[30,40,50]]
+dlist = [[10,20],[40,50]]
+
+
+
+tuple ( immutable , uneditable , unchangeable)
+-----
+tuple contains set of elements.
+Elements can be numbers or strings or any combination.
+tuple is defined in ().
+**** Elements inside tuple cant be modified directly ***
+
+atup = (40,50,60)
+btup = ("java","oracle","genai")
+ctup = (50,45.45,"unix")
+dtup = ((10,20),(40,50))
+
+
+
+dictionary ( hashmap  hash  json  associativearray )
+-----------
+dictionary contains keys aand values.
+In dictionary, keys are unique
+key can be number or string
+value can be number,string,list,tuple,dictionary,set
+
+syntax:  object =  { key: value , key:value , key:value}
+example:  book  = {"chap1":10,"chap2":20 ,"chap3":30 }
+          data  = {1:2,3:4,5:6}
+          book  = {"chap1":["rita","US"],"chap2":["gita","UK"] }
+          book  = {"chap1":{"city":"UK"},"chap2":{"city":"US"}   }
+
+
+Index
+-------
+chap1  10
+chap2  20
+chap3  30
+chap4  40
+chap5  40
+
+
+
+set ( venndiagrams)
+-----
+set is UNORDERED collection of UNIQUE elements of same type.
+
+aset = {10,10,10,20,30,30}
+
+
+level1
+level1
+level1
+level1
+level1
+if cond:
+    level2
+    level2
+else:
+    level2
+    level2
+level1
+level1
+
+
+conditions
+-------------
+simple if
+if-else 
+if-elif-elif-elif-else
+
+
+
+
+task        =      core python skills      + libraries + domain expertise
+                  ( procedural  or oop)
+
+
+
+###C
+for ( i = 1 ; i <=10 ; i++)
+{
+    printf("%d",i)
+}
+
+
+printf("hello\n")
+
+
+for loop
+while loop
+
+
+mutable objects
+----------------
+list
+dictionary
+set
+
+immutable objects
+-----------------
+number
+string
+tuple
+
+
+
+**** Never save the filename with builtin keywords, functions and library names.
+
+list.py  ----> wrong practice
+
+range.py -----> wrong practice   X
+
+
+
+
+dataset
+--------
+csv
+json  ---> keys and values ----> dictionary
+yaml
+xml
+
+
+
+file handling
+----------------------
+
+txt
+csv
+json
+xml
+yaml
+xlsx
+xls
+log 
+ppt
+pptx
+pdf
+docx
+json
+html
+zip
+rar
+.tar.gz
+gz
+7z
+jpg
+gif
+mpeg
+mp3
+dat
+
+
+
+working with flat files ( txt csv conf log dat)
+-------------------------------------------------
+- no need of installing any libraies
+
+
+read mode r 
+write mode w 
+append mode  a
+
+opening the file 
+----------------------
+
+syntax:   object = open(filename , mode)
+example:    fobj = open("customers.txt","r" )   # read mode
+            # the file should exist to read the file
+
+           fobj = open("customers.txt","w" )    # write mode
+            case1 : If the file is not existing , file will be created first
+            case2: If the file is already existing, it overwrites the content
+
+
+           fobj = open("customers.txt","a" )    # append mode
+            case1 : If the file is not existing , file will be created first
+            case2: If the file is already existing, it appends the new content
+
+
+
+closing the file
+---------------
+fobj.close()
+
+
+
+
+
+
+
+
+
+
+
+working with third party files ( docx pptx pdf 7z xlsx  db connection    web scrapping   web development  visualization)
+----------------------------------------------------------
+we need to install third party libary from www.pypi.org
+
+
+
+
+
+
+
+reading the file
+-----------------
+1. reading the file line by line using file object
+2. fobj.readlines()
+3. fobj.read()
+4. using csv library
+5. using pandas library
+
+writing to the file
+----------------
+fobj.write()
+fobj.writelines()
+using csv library
+using pandas library
+
+
+
+step1: Creating virtual enviornment
+-------------------------------
+pip -m venv myenv1
+
+step2: activate your enviornment
+----------------------------------
+ .\myenv1\Scripts\activate  ( windows )
+ source ./myenv1/bin/activate ( Linux or mac)
+
+step3: deactivate 
+-------------------
+deactivate 
+
+
+
+
+exception handling
+--------------------
+1.syntax error
+2. semantic error or runtime error or logical error
+
+handling the errors that occurs during runtime is known as exception handling
+
+try
+except
+else
+finally
+
+
+function | definition | block | subroutine | submodule
+-----------------------------------------------------
+
+
+builtin functions
+in the console ...  dir(__builtins__)
+
+
+user defined functions
+---------------------------
+reusability purpose
+define code once .. and call it for multiple times
+
+** In python, user defined function begins with def keyword.##
+
+
+different ways of passing arguments
+--------------------------------------
+fixed arguments
+default arguments
+variable length arguments
